@@ -1,5 +1,5 @@
-java_script:
-  config_file: .jshintrc
-jscs:
+javascript:
+  enabled: false
+
+eslint:
   enabled: true
-  config_file: .jscsrc
