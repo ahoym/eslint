@@ -13,7 +13,7 @@ test("Parsing an ESLint config file", function() {
       globals: {},
       env: {},
       rules: { semi: 2 },
-      ecmaFeatures: {},
+      parserOptions: {},
     }
   );
 });
@@ -40,9 +40,9 @@ test("Parsing an ESLint config file with airbnb's config", function() {
     "matching property `rules`"
   );
   deepEqual(
-    parsedConfig.ecmaFeatures,
-    expectedConfig.ecmaFeatures,
-    "matching property `ecmaFeatures`"
+    parsedConfig.parserOptions,
+    expectedConfig.parserOptions,
+    "matching property `parserOptions`"
   );
 });
 
