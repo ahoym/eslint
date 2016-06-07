@@ -5,7 +5,9 @@ var Config = require("../lib/config");
 QUnit.module("Config");
 
 test("Parsing an ESLint config file", function() {
-  var config = new Config("{ \"rules\": { \"semi\": 2, }, }");
+  var config = new Config(
+    "{\"plugins\": [\"react\"], \"rules\": { \"semi\": 2, }, }"
+  );
 
   deepEqual(
     config.parse(),
@@ -14,6 +16,7 @@ test("Parsing an ESLint config file", function() {
       env: {},
       rules: { semi: 2 },
       parserOptions: {},
+      plugins: ['react'],
     }
   );
 });
